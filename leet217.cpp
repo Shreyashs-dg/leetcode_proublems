@@ -10,7 +10,7 @@ public:
             freq[nums[i]]++;
         }
         for(int i=0 ; i<nums.size(); i++){
-            if(freq[i]>1){
+            if(freq[nums[i]]>1){
                 return true;
             }
         }
