@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+//claculation of running sum 
 using namespace std;
 class Solution {
 public:
