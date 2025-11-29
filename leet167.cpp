@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+//two sum calculation 
 using namespace std;
 class Solution {
 public:
