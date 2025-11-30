@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+//missing no finding in a array 
 using namespace std;
 class Solutions{
     public:
