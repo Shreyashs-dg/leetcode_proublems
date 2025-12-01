@@ -29,7 +29,7 @@ int main()
 {
     Solution s1;
     double x=2;
-    int n=50;
+    int n=10;
     cout<<s1.myPow(x,n);
     return 0;
 }
