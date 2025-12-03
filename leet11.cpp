@@ -6,16 +6,36 @@ class Solution{
     public:
     int maxArea(vector<int>& height){
         int n=height.size();
-        int maX=0;
-        for(int i=0 ; i<n ;i++){
-            for(int j=i+1 ; j<n ; j++){
-                int w = j - i;
-                int h = min( height[i] , height[j]);
-                int currentArea = w * h;
-                maX = max(currentArea , maX);
+        //brute force  aproach 
+        // int maX=0;
+        // for(int i=0 ; i<n ;i++){
+        //     for(int j=i+1 ; j<n ; j++){
+        //         int w = j - i;
+        //         int h = min( height[i] , height[j]);
+        //         int currentArea = w * h;
+        //         maX = max(currentArea , maX);
+        //     }
+        // }
+        // return maX;
+
+
+        //optimised version 
+        int maxWater=0;
+        int lp=0,rp=n-1;
+        while(lp < rp){
+            int w = rp - lp;
+            int h = min(height[lp],height[rp]);
+            int currentWater = w * h;
+            maxWater=max(currentWater,maxWater);
+            if(height[lp]<height[rp]){
+                lp++;
             }
+            else{
+                rp--;
+            }
+
         }
-        return maX;
+        return maxWater;
     }
 
 };
